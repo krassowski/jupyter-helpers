@@ -1,0 +1,4 @@
+pandas
+pygments
+ipywidgets
+IPython
