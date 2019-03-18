@@ -11,7 +11,8 @@ This collection of Jupyter helpers will help you to:
 - Use interactive (following) tail for long outputs
 
 
-The detailed description is in preparation.
+The examples are available in [demos](https://github.com/krassowski/jupyter-helpers/tree/master/demos) directory. Please, see the [Productivity tips for Jupyter (Python)](https://medium.com/@krassowski.michal/productivity-tips-for-jupyter-python-a3614d70c770) article for introduction and more code samples. For jump-to-definition feature, please visit [jupyterlab-go-to-definition](https://github.com/krassowski/jupyterlab-go-to-definition).
+
 
 
 ### Installation
@@ -37,22 +38,22 @@ To check if you have required system libraries for the better GNOME integration,
 
 ### Showcase
 
-Notifications:
+#### Notifications
 
 ![Notifications](https://raw.githubusercontent.com/krassowski/jupyter-helpers/master/images/notifications_integration.gif)
 
-Tailing outputs:
+#### Tailing outputs
 
 ![Following tail](https://raw.githubusercontent.com/krassowski/jupyter-helpers/master/images/tail.gif)
 
-Auto-completion in R cells:
+#### Auto-completion in R cells
 
 ![R auto-completion](https://raw.githubusercontent.com/krassowski/jupyter-helpers/master/images/r_autocomplete.gif)
 
-Neat namespaces:
+#### Neat namespaces
 
 ![NeatNamespace](https://raw.githubusercontent.com/krassowski/jupyter-helpers/master/images/neat_namespace.png)
 
-Selective imports:
+#### Selective imports
 
 ![Selective imports](https://raw.githubusercontent.com/krassowski/jupyter-helpers/master/images/selective_import.png)
