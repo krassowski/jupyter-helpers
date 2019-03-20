@@ -19,14 +19,14 @@ if __name__ == '__main__':
     setup(
         name='jupyter_helpers',
         packages=find_packages(),
-        version='0.1',
+        version='0.1.1',
         license='MIT',
         description='A collection of helpers for Jupyter/IPython',
         long_description=get_long_description('README.md'),
         author='Michal Krassowski',
         author_email='krassowski.michal+pypi@gmail.com',
         url='https://github.com/krassowski/jupyter-helpers',
-        download_url='https://github.com/krassowski/jupyter-helpers/tarball/v0.1',
+        download_url='https://github.com/krassowski/jupyter-helpers/tarball/v0.1.1',
         keywords=['jupyter', 'jupyterlab', 'notebook', 'helpers'],
         classifiers=[
             'Development Status :: 4 - Beta',
@@ -43,5 +43,7 @@ if __name__ == '__main__':
             'Programming Language :: Python :: 3.6',
             'Programming Language :: Python :: 3.7'
         ],
-        install_requires=[],
+        install_requires=[
+            'pandas', 'pygments', 'ipywidgets', 'IPython'
+        ],
     )
