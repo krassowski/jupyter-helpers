@@ -8,5 +8,5 @@ notify_send_version=1.0
 wget https://github.com/vlevit/notify-send.sh/archive/v${notify_send_version}.tar.gz
 tar -xzf v${notify_send_version}.tar.gz
 rm v${notify_send_version}.tar.gz
-rm -r notify-send
+rm -frv notify-send # remove old version if exists
 mv notify-send.sh-${notify_send_version} notify-send
