@@ -2,3 +2,4 @@ pandas
 pygments
 ipywidgets
 IPython
+nbimporter
