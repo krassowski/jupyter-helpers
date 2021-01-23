@@ -4,14 +4,14 @@ This collection of Jupyter helpers will help you to:
 
 - Play a sound once the computations have finished (or failed)
 - Integrate the notifications with your OS (ready for GNOME shell)
-- Enable auto-completion for rpy2 (great for using  ggplot2!)
+- Enable auto-completion for rpy2 (great for using  ggplot2!) - now also availabvle in [jupyterlab-lsp](https://github.com/krassowski/jupyterlab-lsp)
 - Summarize dictionaries and other structures in a nice table
 - Selectively import from other notebooks
 - Scroll to the recently executed cell on error or when opening the notebook
 - Use interactive (following) tail for long outputs
 
 
-The examples are available in [demos](https://github.com/krassowski/jupyter-helpers/tree/master/demos) directory. Please, see the [Productivity tips for Jupyter (Python)](https://medium.com/@krassowski.michal/productivity-tips-for-jupyter-python-a3614d70c770) article for introduction and more code samples. For jump-to-definition feature, please visit [jupyterlab-go-to-definition](https://github.com/krassowski/jupyterlab-go-to-definition).
+The examples are available in [demos](https://github.com/krassowski/jupyter-helpers/tree/master/demos) directory. Please, see the [Productivity tips for Jupyter (Python)](https://medium.com/@krassowski.michal/productivity-tips-for-jupyter-python-a3614d70c770) article for introduction and more code samples. For jump-to-definition feature, please visit [jupyterlab-lsp](https://github.com/krassowski/jupyterlab-lsp).
 
 
 
