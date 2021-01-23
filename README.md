@@ -4,7 +4,7 @@ This collection of Jupyter helpers will help you to:
 
 - Play a sound once the computations have finished (or failed)
 - Integrate the notifications with your OS (ready for GNOME shell)
-- Enable auto-completion for rpy2 (great for using  ggplot2!) - now also availabvle in [jupyterlab-lsp](https://github.com/krassowski/jupyterlab-lsp)
+- Enable auto-completion for rpy2 (great for using  ggplot2!) - now also available in [jupyterlab-lsp](https://github.com/krassowski/jupyterlab-lsp)
 - Summarize dictionaries and other structures in a nice table
 - Selectively import from other notebooks
 - Scroll to the recently executed cell on error or when opening the notebook
