@@ -3,3 +3,4 @@ pygments
 ipywidgets
 IPython
 nbimporter
+jupyterlab_widgets

@@ -39,7 +39,8 @@ class Notifications:
 
     def __init__(
         self, success_audio=None, time_threshold=5, failure_audio=None, integration=None,
-        hide_after_next_success=True, scroll_to_exceptions='smooth', activate=True
+        hide_after_next_success=True, scroll_to_exceptions='smooth', activate=True,
+        smart_scroll=True
     ):
         f"""Activate notifications after successful completion of computations longer than threshold or after a failure.
 
@@ -49,6 +50,7 @@ class Notifications:
             - threshold: time required to pass between start and the end of computation to generate a beep
             - scroll_to_exceptions: behaviour for scrolling to exceptions (or None to disable)
             - integrate_with: 'GNOME' if you wish to enable GNOME integration
+            - smart_scroll: try to avoid scrolling if the cell with exception is already visible on the screen
 
         {self.suggested_sounds}
         """
@@ -75,6 +77,7 @@ class Notifications:
         self.failure_audio = failure_audio
 
         self.scroll_to_exceptions = scroll_to_exceptions
+        self.smart_scroll = smart_scroll
         self.hide_after_next_success = hide_after_next_success
 
         # state
@@ -142,4 +145,4 @@ class Notifications:
         if self.failure_audio:
             play_sound(self.failure_audio)
         if self.scroll_to_exceptions:
-            scroll_to_current_cell(self.scroll_to_exceptions)
+            scroll_to_current_cell(self.scroll_to_exceptions, smart=self.smart_scroll)
