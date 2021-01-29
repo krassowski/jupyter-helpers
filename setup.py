@@ -19,7 +19,7 @@ if __name__ == '__main__':
     setup(
         name='jupyter_helpers',
         packages=find_packages(),
-        version='0.2.0',
+        version='0.2.1',
         license='MIT',
         description='A collection of helpers for using IPython in Jupyter(Lab)',
         long_description=get_long_description('README.md'),
@@ -32,7 +32,6 @@ if __name__ == '__main__':
             'License :: OSI Approved :: MIT License',
             'Framework :: IPython',
             'Framework :: Jupyter',
-            'Framework :: JupyterLab',
             'Operating System :: Microsoft :: Windows',
             'Operating System :: POSIX :: Linux',
             'Topic :: Utilities',
