@@ -1,5 +1,7 @@
 # Jupyter helpers for IPython
 
+[![pypi-version](https://img.shields.io/pypi/v/jupyter-helpers.svg)](https://python.org/pypi/jupyter-helpers)
+
 This collection of IPython helpers optimized for JupyterLab users will help you to:
 
 - Play a sound once the computations have finished (or failed)
