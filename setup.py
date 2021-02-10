@@ -19,7 +19,7 @@ if __name__ == '__main__':
     setup(
         name='jupyter_helpers',
         packages=find_packages(),
-        version='0.2.2',
+        version='0.2.3',
         license='MIT',
         description='A collection of helpers for using IPython in Jupyter(Lab)',
         long_description=get_long_description('README.md'),
