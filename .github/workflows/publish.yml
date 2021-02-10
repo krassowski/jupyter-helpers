@@ -15,6 +15,7 @@ jobs:
         python-version: 3.9
     - name: Install build dependencies
       run: |
+        sudo apt-get install pandoc
         python -m pip install --upgrade pip wheel pypandoc
     - name: Build package
       run: |
