@@ -8,7 +8,7 @@ ROOT = Path(__file__).parent
 class DesktopIntegration(ABC):
 
     @abstractmethod
-    def notify(self, title, text, notify_id=None, show_again=True, urgency='normal'):
+    def notify(self, title, text, notify_id=None, show_again=True, urgency='normal', expire_time=60):
         pass
 
     @abstractmethod
@@ -27,7 +27,7 @@ class GnomeIntegration(DesktopIntegration):
         )
         self.using_drop_in_replacement = drop_in_replacement.exists()
 
-    def notify(self, title, text, notify_id=None, show_again=True, urgency='normal'):
+    def notify(self, title, text, notify_id=None, show_again=True, urgency='normal', expire_time=60):
 
         arguments = [title, text, f'--urgency={urgency}']
 
@@ -35,6 +35,9 @@ class GnomeIntegration(DesktopIntegration):
             arguments.append('--print-id')
             if notify_id and not show_again:
                 arguments.append(f'--replace={notify_id}')
+        else:
+            arguments.append(f'--hint int:transient:{expire_time}')
+            arguments.append(f'--expire-time {expire_time}')
 
         if show_again and notify_id:
             self.notify_close(notify_id)
