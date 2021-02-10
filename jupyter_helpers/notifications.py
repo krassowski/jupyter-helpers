@@ -40,7 +40,7 @@ class Notifications:
     def __init__(
         self, success_audio=None, time_threshold=5, failure_audio=None, integration=None,
         hide_after_next_success=True, scroll_to_exceptions='smooth', activate=True,
-        smart_scroll=True
+        smart_scroll=True, max_title_len=50, max_text_len=300
     ):
         f"""Activate notifications after successful completion of computations longer than threshold or after a failure.
 
@@ -51,6 +51,8 @@ class Notifications:
             - scroll_to_exceptions: behaviour for scrolling to exceptions (or None to disable)
             - integrate_with: 'GNOME' if you wish to enable GNOME integration
             - smart_scroll: try to avoid scrolling if the cell with exception is already visible on the screen
+            - max_title_len: maximal length of the title to show in the notification
+            - max_text_len: maximal length of the text to show in the notification
 
         {self.suggested_sounds}
         """
@@ -79,6 +81,9 @@ class Notifications:
         self.scroll_to_exceptions = scroll_to_exceptions
         self.smart_scroll = smart_scroll
         self.hide_after_next_success = hide_after_next_success
+
+        self.max_title_len = max_title_len
+        self.max_text_len = max_text_len
 
         # state
         self.start_time = None    # time in sec, or None
@@ -131,8 +136,8 @@ class Notifications:
 
     def _notify_of_exception(self, i_shell, etype, value, tb: TracebackType, tb_offset):
         self.exception_notify_id = self.integration.notify(
-            title=etype.__name__,
-            text=str(value),
+            title=etype.__name__[:self.max_title_len],
+            text=str(value)[:self.max_text_len],
             urgency='critical',
             notify_id=self.exception_notify_id
         )
