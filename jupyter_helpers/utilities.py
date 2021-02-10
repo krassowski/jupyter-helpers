@@ -6,6 +6,7 @@ from IPython.display import display, Audio
 OUTPUT_AREA_CLASS = 'jp-OutputArea-child'
 OUT_CLASS = 'jp-transient-html'
 
+
 def try_to_hide_parent(css_class, level):
     """deprecated"""
     return (
@@ -28,6 +29,7 @@ def delete_closest(css_class):
         f"var that = widget_our ? widget_our : this;"
         f"var el = that.closest('.{css_class}'); el.parentNode.removeChild(el);"
     )
+
 
 def delete_element(levels_up=1):
     return (
@@ -94,10 +96,16 @@ def transient_html(code: str, lifetime: float = 3):
     except ImportError:
         from IPython.display import HTML
         element = HTML(code)
-        result = display(element)
+        display(element)
 
 
-def scroll_to_current_cell(scroll_behaviour='smooth', preserve=False, smart=True, scroll_to='center', cell_class='jp-Cell'):
+def scroll_to_current_cell(
+    scroll_behaviour='smooth',
+    preserve=False,
+    smart=True,
+    scroll_to='center',
+    cell_class='jp-Cell'
+):
     behaviour = f"behavior: '{scroll_behaviour}', block: '{scroll_to}'"
     code = (
         # scroll to the output
@@ -105,7 +113,10 @@ def scroll_to_current_cell(scroll_behaviour='smooth', preserve=False, smart=True
             f"let cell = this.closest('.{cell_class}');",
             'let rect = cell.getBoundingClientRect();',
             (
-                'let is_visible = rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight);'
+                (
+                    'let is_visible = rect.top >= 0 &&'
+                    ' rect.bottom <= (window.innerHeight || document.documentElement.clientHeight);'
+                )
                 if smart else
                 'let is_visible = false;'
             ),

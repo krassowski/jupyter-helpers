@@ -27,7 +27,7 @@ class SimpleFollowingTail(AbstractFollowingTail):
     def __init__(self, n=1):
         if n != 1:
             try:
-                from ipywidgets import Output
+                from ipywidgets import Output   # noqa
                 warn('To use n > 1, please use PyWidgetsInteractiveTail')
             except ImportError:
                 warn('To enable use of n > 1, please install ipywidgets package')
