@@ -1,5 +1,6 @@
 # Jupyter helpers for IPython
 
+[![flake8](https://github.com/krassowski/jupyter-helpers/workflows/Flake8/badge.svg)](https://github.com/krassowski/jupyter-helpers/actions?query=workflow%3A%22flake8%22)
 [![pypi-version](https://img.shields.io/pypi/v/jupyter-helpers.svg)](https://python.org/pypi/jupyter-helpers)
 
 This collection of IPython helpers optimized for JupyterLab users will help you to:
