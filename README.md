@@ -1,6 +1,6 @@
-# Jupyter helpers
+# Jupyter helpers for IPython
 
-This collection of Jupyter helpers will help you to:
+This collection of IPython helpers optimized for JupyterLab users will help you to:
 
 - Play a sound once the computations have finished (or failed)
 - Integrate the notifications with your OS (ready for GNOME shell)
