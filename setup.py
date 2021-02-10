@@ -19,14 +19,14 @@ if __name__ == '__main__':
     setup(
         name='jupyter_helpers',
         packages=find_packages(),
-        version='0.2.1',
+        version='0.2.2',
         license='MIT',
         description='A collection of helpers for using IPython in Jupyter(Lab)',
         long_description=get_long_description('README.md'),
         author='Michal Krassowski',
         author_email='krassowski.michal+pypi@gmail.com',
         url='https://github.com/krassowski/jupyter-helpers',
-        keywords=['jupyter', 'jupyterlab', 'notebook', 'helpers'],
+        keywords=['ipython', 'jupyter', 'jupyterlab', 'notebook', 'helpers'],
         classifiers=[
             'Development Status :: 4 - Beta',
             'License :: OSI Approved :: MIT License',

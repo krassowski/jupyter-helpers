@@ -22,6 +22,12 @@ def _remove_notification_handlers(ipython):
                 ipython.events.unregister(event, callback)
 
 
+def _trim(text, length):
+    if len(text) > length:
+        text = text[:length] + '...'
+    return text
+
+
 class Notifications:
 
     integrations = {
@@ -136,8 +142,8 @@ class Notifications:
 
     def _notify_of_exception(self, i_shell, etype, value, tb: TracebackType, tb_offset):
         self.exception_notify_id = self.integration.notify(
-            title=etype.__name__[:self.max_title_len],
-            text=str(value)[:self.max_text_len],
+            title=_trim(etype.__name__, self.max_title_len),
+            text=_trim(str(value), self.max_text_len),
             urgency='critical',
             notify_id=self.exception_notify_id
         )

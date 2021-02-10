@@ -36,8 +36,8 @@ class GnomeIntegration(DesktopIntegration):
             if notify_id and not show_again:
                 arguments.append(f'--replace={notify_id}')
         else:
-            arguments.append(f'--hint int:transient:{expire_time}')
-            arguments.append(f'--expire-time {expire_time}')
+            arguments.append(f'--hint=int:transient:{expire_time}')
+            arguments.append(f'--expire-time={expire_time}')
 
         if show_again and notify_id:
             self.notify_close(notify_id)
