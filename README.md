@@ -20,17 +20,9 @@ The examples are available in [demos](https://github.com/krassowski/jupyter-help
 
 ### Installation
 
-For basic functionality:
 
 ```bash
-pip3 install jupyter_helpers
-```
-
-To include interactive widgets:
-
-```bash
-pip3 install ipywidgets
-jupyter labextension install @jupyter-widgets/jupyterlab-manager
+pip3 install "jupyterlab>=3" jupyter_helpers ipywidgets
 ```
 
 To use advanced GNOME integration,
@@ -44,6 +36,8 @@ To check if you have required system libraries for the better GNOME integration,
 #### Notifications
 
 ![Notifications](https://raw.githubusercontent.com/krassowski/jupyter-helpers/master/images/notifications_integration.gif)
+
+Note: this implementation is IPython-specific and limitted to GNOME. For a universal implementation of JupyterLab notifications checkout: https://github.com/mwakaba2/jupyterlab-notifications
 
 #### Tailing outputs
 
